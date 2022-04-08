@@ -39,8 +39,7 @@ class FourthViewController: UIViewController {
         self.navigation?.popToRootViewController(animated: true)
         self.dismiss(animated:true)
         
-        
-//        self.navigationController?.popViewController(animated: true)
+ 
     }
 
 }

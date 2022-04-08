@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
     @IBAction func moveThirdController(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as? ThirdViewController else { return }
         
-//        self.present(nextVC, animated: true, completion: nil)
+
         
         nextVC.name = inputName.text
         
@@ -26,8 +26,5 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var inputName: UITextField!
 
-//    self.dismiss(animated: true, completion: {
-//        self.navigationController?.popToRootViewController(animated: true)
-//    })
 }
 

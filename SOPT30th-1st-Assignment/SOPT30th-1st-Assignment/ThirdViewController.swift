@@ -21,7 +21,7 @@ class ThirdViewController: UIViewController {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "FourthViewController") as? FourthViewController else { return }
         
         guard let name = name else { return }
-        nextVC.name = "\(name)님 인스타그램에 오신것을 환영합니다."
+        nextVC.name = "\(name)님, 인스타그램에 오신것을 환영합니다."
         nextVC.navigation = self.navigationController
         
         self.present(nextVC, animated: true)
