@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B87B5A1281269B500321E2E /* TapBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B87B5A0281269B500321E2E /* TapBar.storyboard */; };
+		6B87B5A62812A40500321E2E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87B5A52812A40500321E2E /* TabBarController.swift */; };
+		6B87B5A82812A65300321E2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87B5A72812A65300321E2E /* HomeViewController.swift */; };
+		6B87B5AA2812A68500321E2E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87B5A92812A68500321E2E /* SearchViewController.swift */; };
+		6B87B5AC2812A69900321E2E /* ReelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87B5AB2812A69900321E2E /* ReelViewController.swift */; };
+		6B87B5AE2812A6B200321E2E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87B5AD2812A6B200321E2E /* ShopViewController.swift */; };
+		6B87B5B02812A6BD00321E2E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87B5AF2812A6BD00321E2E /* ProfileViewController.swift */; };
 		6BCA77B2280014F700C10C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA77B1280014F700C10C3D /* AppDelegate.swift */; };
 		6BCA77B4280014F700C10C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA77B3280014F700C10C3D /* SceneDelegate.swift */; };
 		6BCA77B6280014F700C10C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA77B5280014F700C10C3D /* ViewController.swift */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B87B5A0281269B500321E2E /* TapBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TapBar.storyboard; sourceTree = "<group>"; };
+		6B87B5A52812A40500321E2E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6B87B5A72812A65300321E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6B87B5A92812A68500321E2E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6B87B5AB2812A69900321E2E /* ReelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelViewController.swift; sourceTree = "<group>"; };
+		6B87B5AD2812A6B200321E2E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		6B87B5AF2812A6BD00321E2E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6BCA77AE280014F700C10C3D /* SOPT30th-1st-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT30th-1st-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCA77B1280014F700C10C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BCA77B3280014F700C10C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +80,16 @@
 				6BCA77B3280014F700C10C3D /* SceneDelegate.swift */,
 				6BCA77B5280014F700C10C3D /* ViewController.swift */,
 				6BCA77B7280014F700C10C3D /* Main.storyboard */,
+				6B87B5A0281269B500321E2E /* TapBar.storyboard */,
+				6B87B5AD2812A6B200321E2E /* ShopViewController.swift */,
+				6B87B5AF2812A6BD00321E2E /* ProfileViewController.swift */,
+				6B87B5AB2812A69900321E2E /* ReelViewController.swift */,
+				6B87B5A92812A68500321E2E /* SearchViewController.swift */,
+				6B87B5A72812A65300321E2E /* HomeViewController.swift */,
 				6BCA77CB28002A2A00C10C3D /* FourthViewController.swift */,
 				6BCA77C728002A0700C10C3D /* SecondViewController.swift */,
 				6BCA77C928002A1B00C10C3D /* ThirdViewController.swift */,
+				6B87B5A52812A40500321E2E /* TabBarController.swift */,
 				6BCA77BA280014F700C10C3D /* Assets.xcassets */,
 				6BCA77BC280014F700C10C3D /* LaunchScreen.storyboard */,
 				6BCA77BF280014F700C10C3D /* Info.plist */,
@@ -136,6 +157,7 @@
 			files = (
 				6BCA77BE280014F700C10C3D /* LaunchScreen.storyboard in Resources */,
 				6BCA77BB280014F700C10C3D /* Assets.xcassets in Resources */,
+				6B87B5A1281269B500321E2E /* TapBar.storyboard in Resources */,
 				6BCA77B9280014F700C10C3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,8 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B87B5A62812A40500321E2E /* TabBarController.swift in Sources */,
 				6BCA77CC28002A2A00C10C3D /* FourthViewController.swift in Sources */,
+				6B87B5AE2812A6B200321E2E /* ShopViewController.swift in Sources */,
 				6BCA77C828002A0700C10C3D /* SecondViewController.swift in Sources */,
+				6B87B5AA2812A68500321E2E /* SearchViewController.swift in Sources */,
+				6B87B5AC2812A69900321E2E /* ReelViewController.swift in Sources */,
+				6B87B5B02812A6BD00321E2E /* ProfileViewController.swift in Sources */,
+				6B87B5A82812A65300321E2E /* HomeViewController.swift in Sources */,
 				6BCA77B6280014F700C10C3D /* ViewController.swift in Sources */,
 				6BCA77CA28002A1B00C10C3D /* ThirdViewController.swift in Sources */,
 				6BCA77B2280014F700C10C3D /* AppDelegate.swift in Sources */,

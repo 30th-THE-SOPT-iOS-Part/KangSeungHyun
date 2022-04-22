@@ -25,6 +25,13 @@ class FourthViewController: UIViewController {
     
     @IBOutlet weak var welcome: UILabel!
     
+    @IBAction func loginOtherAccount(_ sender: Any) {
+        self.navigation?.popToRootViewController(animated: true)
+        self.dismiss(animated:true)
+
+    }
+    
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     /*
     // MARK: - Navigation
 
@@ -35,11 +42,21 @@ class FourthViewController: UIViewController {
     }
     */
     
-    @IBAction func backButtonDidTap(_ sender: Any) {
-        self.navigation?.popToRootViewController(animated: true)
-        self.dismiss(animated:true)
+    
+    @IBAction func moveToTabBar(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
         
- 
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true)
     }
+    
+//    @IBAction func backButtonDidTap(_ sender: Any) {
+//        self.navigation?.popToRootViewController(animated: true)
+//        self.dismiss(animated:true)
+//
+//
+//    }
 
 }
