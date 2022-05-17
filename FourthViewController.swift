@@ -11,6 +11,7 @@ class FourthViewController: UIViewController {
     var name: String?
     var navigation: UINavigationController?
     var password: String?
+    
 
 
     override func viewDidLoad() {
@@ -46,12 +47,29 @@ class FourthViewController: UIViewController {
     
     
     @IBAction func moveToTabBar(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
+        let alert = UIAlertController(title: "알림", message: "알림창입니다.", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "확인", style: .default, handler: {[weak self] _ in
+            
+            let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
+            
+            guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+            
+            nextVC.modalPresentationStyle = .fullScreen
+            self?.present(nextVC, animated: true)})
         
-        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        signUp()
+        alert.addAction(confirm)
         
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true)
+        
+//        signUp()
+//        let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
+//
+//        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+//
+//        nextVC.modalPresentationStyle = .fullScreen
+//        self.present(alert, animated: false, completion: nil)
+//        self.present(nextVC, animated: true)
+       
     }
     
 //    @IBAction func backButtonDidTap(_ sender: Any) {
@@ -61,10 +79,7 @@ class FourthViewController: UIViewController {
 //
 //    }
     
-    func signUpButtonTapped(_sender: Any){
-        signUp()
-    }
-    
+
 
 
 }

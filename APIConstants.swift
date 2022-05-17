@@ -9,12 +9,12 @@ import Foundation
 
 struct APIConstants {
     // MARK: - Base URL
-    static let baseURL = "http://localhost:8444"
-//    static let baseURL = "http://13.124.62.236"
+//    static let baseURL = "http://localhost:8444"
+    static let baseURL = "http://13.124.62.236"
 
     
     
-    static let signUpURL = ""
+    static let signUpURL = baseURL + "/auth/signup"
     
     
     
@@ -24,7 +24,7 @@ struct APIConstants {
     // MARK: - Feature URL
     // loginURL = ""
 //    static let loginURL = baseURL + "/auth/signin"
-    static let loginURL = baseURL + "/terms/test"
+    static let loginURL = baseURL + "/auth/signin"
 
 }
 

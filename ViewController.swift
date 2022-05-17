@@ -17,12 +17,15 @@ class ViewController: UIViewController {
  
     
     @IBOutlet weak var inputEmail: UITextField!
+    @IBOutlet weak var inputPassword: UITextField!
     
     @IBAction func logIn(_ sender: Any) {
+        signIn()
+        
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "FourthViewController") as? FourthViewController else { return }
         
 
-        
+
         guard let name = inputEmail.text else { return }
         nextVC.name = "\(name)님, 인스타그램에 오신것을 환영합니다."
         nextVC.navigation = self.navigationController
@@ -32,21 +35,18 @@ class ViewController: UIViewController {
         self.present(nextVC, animated: true)
     }
     
-    func signInButtonTapped(_sender: Any){
-        signIn()
-    }
 }
 
 extension ViewController {
     func signIn(){
-        guard let name = name else {return}
+        guard let email = inputEmail.text else {return}
 //        guard let email = email else {return}
-        guard let password = password else {return}
+        guard let password = inputPassword.text else {return}
         
         //여기 로직부터 이제 문제인건데, text field 에는 제대로 들어옴.
-        UserService.shared.signUp(
+        UserService.shared.signIn(
         name: "ZaidKang",
-        email: name,
+        email: email,
         password: password)
         {
             
