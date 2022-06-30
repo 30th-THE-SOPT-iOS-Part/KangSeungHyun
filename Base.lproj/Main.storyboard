@@ -93,6 +93,7 @@
                     <navigationItem key="navigationItem" id="nXW-o5-deo"/>
                     <connections>
                         <outlet property="inputEmail" destination="lK5-VN-rL3" id="nJ4-PF-WMm"/>
+                        <outlet property="inputPassword" destination="ovv-KM-cQq" id="MXJ-BE-yFk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -225,6 +226,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q3D-fx-XaB"/>
+                    <connections>
+                        <outlet property="inputPassword" destination="VZM-8A-1YI" id="XIb-OB-P9K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyF-eQ-wAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

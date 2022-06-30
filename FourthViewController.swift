@@ -10,6 +10,9 @@ import UIKit
 class FourthViewController: UIViewController {
     var name: String?
     var navigation: UINavigationController?
+    var password: String?
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +47,29 @@ class FourthViewController: UIViewController {
     
     
     @IBAction func moveToTabBar(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
+        let alert = UIAlertController(title: "알림", message: "알림창입니다.", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "확인", style: .default, handler: {[weak self] _ in
+            
+            let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
+            
+            guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+            
+            nextVC.modalPresentationStyle = .fullScreen
+            self?.present(nextVC, animated: true)})
         
-        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        signUp()
+        alert.addAction(confirm)
         
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true)
+        
+//        signUp()
+//        let storyboard = UIStoryboard(name: "TapBar", bundle: nil)
+//
+//        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+//
+//        nextVC.modalPresentationStyle = .fullScreen
+//        self.present(alert, animated: false, completion: nil)
+//        self.present(nextVC, animated: true)
+       
     }
     
 //    @IBAction func backButtonDidTap(_ sender: Any) {
@@ -58,5 +78,54 @@ class FourthViewController: UIViewController {
 //
 //
 //    }
+    
+
+
 
 }
+
+extension FourthViewController {
+    func signUp(){
+        guard let name = name else {return}
+//        guard let email = email else {return}
+        guard let password = password else {return}
+        
+        //여기 로직부터 이제 문제인건데, text field 에는 제대로 들어옴.
+        UserService.shared.signUp(
+        name: "ZaidKang",
+        email: name,
+        password: password)
+        {
+            
+            response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? LoginResponse else {return}
+                print(data)
+            case .requestErr(let err):
+                print(err)
+            
+            case .pathErr:
+                print("pathErr")
+            
+            case .serverErr:
+                print("ServerErr")
+                
+            case .networkFail:
+                print("networkFail")
+            }
+            
+                 
+            
+        }
+        
+        
+    }
+
+
+        
+        
+        
+    
+}
+
